@@ -2,7 +2,7 @@ package ai0402;
 
 import java.util.Scanner;
 
-public class TFTest04 {
+public class TrueFalseTest04 {
     public static void main(String[] args) {
         Scanner s =new Scanner(System.in);
         System.out.println("===== 운전면허 필기시험 합격여부 확인 =====");
@@ -16,7 +16,7 @@ public class TFTest04 {
         else
             result = "블합격";
 
-        System.out.print(result);
+        System.out.printf("%d점이므로 %s입니다.", score, result);
 
         s.close();
     }

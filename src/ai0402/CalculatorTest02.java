@@ -1,6 +1,6 @@
 package ai0402;
 
-public class Test02 {
+public class CalculatorTest02 {
     public static void main(String[] args) {
         int num = 20;
         num++ ; System.out.print(num + " ");
