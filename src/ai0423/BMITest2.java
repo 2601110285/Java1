@@ -1,8 +1,8 @@
-package ai0326;
+package ai0423;
 
 import java.util.Scanner;
 
-public class ScannerTest03 {
+public class BMITest2 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
@@ -18,8 +18,23 @@ public class ScannerTest03 {
         double height = s.nextDouble();
 
         double bmi = weight/Math.pow((height/100),2);           // ((height/100)*(height)/100)
+        String result;
 
-        System.out.printf(("\n")+"%s님의 BMI 지수는 %.2f ㎏/㎡ 입니다.",name ,bmi);
+        if(bmi < 18.5)
+            result = "저체중";
+        else if(bmi <= 22.9)
+            result = "정상";
+        else if(bmi <= 24.9)
+            result = "과체중";
+        else if(bmi <= 29.9)
+            result = "비만";
+        else if(bmi <= 34.9)
+            result = "고도비만";
+        else
+            result = "초고도비만";
+
+
+        System.out.println("\n" + name + "님의 BMI 지수는 " + bmi + "㎏/㎡로 " + result + "입니다.");
 
         s.close();
         s1.close();
