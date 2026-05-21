@@ -53,22 +53,19 @@ public class budgetBook {
                     System.out.print("4. 내역(메모)을 입력하세요 (예: 점심식사, 용돈): ");
                     String desc = s.nextLine();
 
-                    // --- [월 단위 초기화 처리] ---
+                    // --- [월 단위 초기화] ---
                     String inputMonth = "";
-                    // 입력받은 날짜(예: 2026-05-19)가 7글자 이상이면
                     if (date.length() >= 7) {
-                        // 0번째부터 7번째 글자 앞까지 잘라서 "2026-05"만 추출
+                        // ex) 2026-05-23 --> 2026-05
                         inputMonth = date.substring(0, 7);
                     }
 
-                    // 가계부에 처음 입력하는 상황이면 현재 달을 세팅해줌
                     if (currentMonth.equals("")) {
                         currentMonth = inputMonth;
                     }
-                    // 새로 입력한 달이 기존에 저장하던 달과 다르면 (달이 넘어갔으면)
+                    // 달이 넘어갔으면 리셋 (단 잔액은 유지)
                     else if (!currentMonth.equals(inputMonth)) {
                         System.out.println("\n*** 달이 바뀌어 이전 내역을 삭제합니다! ***");
-                        // 4개의 리스트를 싹 비우고 새 출발 (단, 잔액은 유지)
                         dates.clear();
                         types.clear();
                         amounts.clear();
@@ -78,7 +75,6 @@ public class budgetBook {
 
                     // --- [날짜순으로 정렬] ---
                     int index = 0;
-                    // 처음부터 리스트 크기만큼 돌면서 들어갈 자리(index)를 찾음
                     while (index < dates.size()) {
                         // 문자열 비교(compareTo)로 기존 날짜보다 입력한 날짜가 더 앞선 날짜면 반복 멈춤
                         if (date.compareTo(dates.get(index)) < 0) {
@@ -130,7 +126,7 @@ public class budgetBook {
                     break;
 
                 default:
-                    // 1, 2, 3 이외의 값을 입력했을 때 예외 처리
+                    // 1, 2, 3 이외의 값을 입력했을 때 예외
                     System.out.println("\n잘못 입력하셨습니다. 1~3번 중에서 선택해주세요.");
                     break;
             }
