@@ -10,7 +10,7 @@ public class RunCarMain {
         sportage.start();
         sportage.upSpeed(50);
         sportage.downSpeed(10);
-        sportage.rotate("좌");
+        sportage.rotate("우");
         sportage.stop();
     }
 }
