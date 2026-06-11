@@ -11,7 +11,7 @@ public class Sportage implements Car{
 
     @Override
     public void stop() {
-        System.out.println(carName + " 자동차를 멈춘다.");
+        System.out.println(carName + "자동차를 멈춘다.");
     }
 
     @Override

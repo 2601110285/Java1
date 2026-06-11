@@ -18,7 +18,7 @@ public class RunPerson {
         men.study();
         men.sleep(8);
 
-        women.eat("고기");
+        women.eat("떡볶이");
         women.study();
         women.sleep(8);
     }

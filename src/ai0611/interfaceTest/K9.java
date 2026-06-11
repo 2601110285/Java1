@@ -1,7 +1,7 @@
 package ai0611.interfaceTest;
 
 public class K9 implements Car{
-    @Override
+    @Overrid
     public void start() {
 
     }

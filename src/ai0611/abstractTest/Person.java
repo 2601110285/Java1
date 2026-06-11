@@ -6,14 +6,14 @@ public abstract class Person {
     int weight;
     int height;
 
-    public void eat(String food){
+    public void eat(String food) {
         System.out.println(food + "을/를 먹는다.");
     }
 
-    public void sleep(int hour){
+    public void sleep(int hour) {
         System.out.println(hour + "시간 잔다.");
     }
 
-//    추상매소드
+    //    추상매소드
     public abstract void study();
 }
