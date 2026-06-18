@@ -20,7 +20,7 @@ public class ArrayTest2 {
         System.out.println("* 새로운 배열의 길이: " + subjects.length);
         System.out.println("* 새로운 배열의 내용");
         for (String subject : subjects){
-            System.out.print(subject + " ")
+            System.out.print(subject + " ");
         }
     }
 }
